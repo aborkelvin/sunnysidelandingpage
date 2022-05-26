@@ -15,5 +15,7 @@
 .DS_Store
 .prettierignore
 
-#Avoid adding the ReadME template created for practise
+#Ignore the ReadME created for awareness
 README.md
+
+
