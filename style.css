@@ -9,12 +9,31 @@ body{
 }
 
 .head{
+    padding: 30px;
     background-image: url('/images/desktop/image-header.jpg');
     background-size:100% 100%;
     background-repeat: no-repeat;
     width:100%;
-    height: 350px;
+    min-height: 450px;
     color: white;
+}
+.head h1{
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    font-size: clamp(30px, 6vw,50px);;
+}
+
+
+
+.headnav{
+    float: right;
+    display: inline;
+    font-size: 20px;
+}
+
+.arrow{
+    display: block;
+    margin: 0 auto;
 }
 
 .nav li{
@@ -23,6 +42,7 @@ body{
     margin: 0 20px;
 }
 ul{
+    display: inline;
     padding: 0;
 }
 
@@ -33,11 +53,59 @@ ul{
     background-color: #4e4e46;
     display: flex;
 }
+.writeup{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containwrite{
+    width: 60%;
+}
+
+.containwrite p{
+    font-family: 'Barlow',serif;
+    color: hsl(210, 4%, 67%);
+}
+.writeup h1{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(23px, 5vw, 35px);
+    font-weight: bolder;
+    margin: 15px 0;
+}
+.writeup p{
+    font-size: clamp(16px, 2vw, 18px);
+}
+.writeup a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;    
+}
+.about a{
+    border-bottom: 4px solid  hsl(51, 100%, 49%);
+}
+.service a{
+    border-bottom: 4px solid rgb(207, 128, 141);
+}
+
+.projects>div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.onimg{    
+    text-align: center; 
+    width: clamp(310px,60%,325px);   
+}
+.onimg h1{
+    font-weight: bolder;
+}
 
 .notop{
     margin-top: 0;
 }
-.about section,.service section,.projects div{
+.about section,.service section,.projects>div{
     flex: 1;
 }
 .about img,.service img{
@@ -45,12 +113,16 @@ ul{
     height: 100%;
 }
 
-.graphics{
+.graphics{    
+    width: 100%;
+    color: hsl(167, 40%, 24%);
     background-image: url('/images/desktop/image-graphic-design.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .photo{
+    width: 100%;
+    color: hsl(198, 62%, 26%);
     background-image: url('/images/desktop/image-photography.jpg');
     background-size: cover;
 }
@@ -76,6 +148,7 @@ h2{
     border-radius: 50%;
 }
 .rev>h1{
+    margin-top: 25px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -105,8 +178,9 @@ h2{
 }
 
 footer{
+    color: hsl(168, 34%, 41%);
     height: 300px;
-    background-color: rgb(150, 216, 216);
+    background-color: rgb(150, 216, 216);    
     padding: 60px 10px 10px 10px;
     display: flex;
     /* justify-content: center; */
@@ -124,4 +198,21 @@ footer>img{
 }
 .footnav{
     margin-bottom: 60px;
+}
+
+
+
+@media screen and (min-width:1000px) {
+    .head{
+        min-height: 500px;
+    }
+    .graphics,.photo{
+        min-height: 400px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .graphics,.photo{
+        min-height: 480px;
+    }
 }
