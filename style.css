@@ -10,7 +10,7 @@ body{
 
 .head{
     padding: 30px;
-    background-image: url('/images/desktop/image-header.jpg');
+    background-image: url('images/desktop/image-header.jpg');
     background-size:100% 100%;
     background-repeat: no-repeat;
     width:100%;
@@ -116,14 +116,14 @@ ul{
 .graphics{    
     width: 100%;
     color: hsl(167, 40%, 24%);
-    background-image: url('/images/desktop/image-graphic-design.jpg');
+    background-image: url('images/desktop/image-graphic-design.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .photo{
     width: 100%;
     color: hsl(198, 62%, 26%);
-    background-image: url('/images/desktop/image-photography.jpg');
+    background-image: url('images/desktop/image-photography.jpg');
     background-size: cover;
 }
 
