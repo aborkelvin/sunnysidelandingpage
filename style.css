@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
-  }
+}
 html,body{
     width: 100vw;
 }
 body{
     margin: 0;
+}
+p{
+    line-height: 25px;
 }
 
 .head{
@@ -27,8 +30,7 @@ body{
 
 .headnav{
     float: right;
-    display: inline;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .arrow{
@@ -38,9 +40,46 @@ body{
 
 .nav li{
     list-style-type: none;
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 10px;    
 }
+
+li a{
+text-align: center;
+display: block;
+padding: 15px 25px;
+text-decoration: none;
+color: white;
+
+border-radius: 20px;
+}
+
+.headnav a:hover{
+    background-color: skyblue;
+}
+
+#contact{
+    background-color: white;
+    color: black;
+    padding: 13px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#contact:hover{
+    background-color: skyblue;
+    color: white;
+}
+
+.footnav li a{
+    color: hsl(168, 34%, 41%);
+    font-size: 18px;
+}
+
+.footnav a:hover{
+    color: white;
+}
+
 ul{
     display: inline;
     padding: 0;
@@ -58,6 +97,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 450px;
 }
 .containwrite{
     width: 60%;
@@ -128,17 +168,25 @@ ul{
 }
 
 .testimonials{
-    height: 500px;
+    min-height: 500px;
     width: 100%;
     background-color: rgb(243, 243, 240);
-    padding: 50px;
+    padding: 60px;
+    color: hsl(213, 9%, 39%);
 }
 h2{
     text-align: center;
 }
+.testimonials>h2{
+    color:hsl(210, 4%, 67%);
+    font-size: 20px;
+    font-family: 'Fraunces', serif;
+    margin: 0 10px 80px 0;
+}
 
 .reviews{
     display: flex;
+    font-weight: bolder;
 }
 .rev>img{
     display: block;
@@ -148,9 +196,10 @@ h2{
     border-radius: 50%;
 }
 .rev>h1{
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 8px;
     text-align: center;
+    color: rgb(43, 42, 42);
 }
 .rev>h5{
     margin: 0px;
@@ -158,6 +207,7 @@ h2{
 }
 .rev>p{
     text-align: center;
+    margin-top: 22px;
 }
 .rev{
     margin: 0 20px;
@@ -193,13 +243,26 @@ footer>img{
     height: 25px;
     margin-bottom: 20px;
 }
-.socials img{
-    margin: 0 10px;
+.socials svg{
+    margin: 0 15px;
 }
+
+.socials svg:hover path{
+    cursor: pointer;
+    fill:white;
+}
+
 .footnav{
     margin-bottom: 60px;
 }
 
+.logo{
+    margin-bottom: 20px;
+    
+}
+.logo path{
+    fill: hsl(168, 34%, 41%);
+}
 
 
 @media screen and (min-width:1000px) {
