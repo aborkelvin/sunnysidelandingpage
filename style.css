@@ -297,6 +297,9 @@ footer>img{
     .about{
         flex-direction: column-reverse;
     }
+    .about img,.service img{
+        display: block;
+    }
     .service,.projects{
         flex-direction: column;
     }
@@ -321,5 +324,11 @@ footer>img{
     }
     li a{
         padding: 10px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    li a{
+        padding: 0px;
     }
 }
