@@ -283,6 +283,17 @@ footer>img{
 }
 
 @media screen and (max-width:500px) {
+    
+    .head{
+        background-image: url(images/mobile/image-header.jpg);
+    }
+    .graphics{
+        background-image: url(images/mobile/image-graphic-design.jpg);
+    }
+    .photo{
+        background-image: url(images/mobile/image-photography.jpg);
+    }
+
     .about{
         flex-direction: column-reverse;
     }
