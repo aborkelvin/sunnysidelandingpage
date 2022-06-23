@@ -41,8 +41,7 @@ ul{
 .headnav{
     float: right;
     font-size: 19px;
-    display: inline-block;
-    background-color: gray;    
+    display: inline-block;   
 }
 
 .headnav li a{
@@ -301,52 +300,7 @@ footer>img{
         background-image: url(images/mobile/image-header.jpg);
         min-height: 470px;
     }
-    
-    .headnav{
-        font-size: 18px;
-        background-color: white;                
-        position: absolute;
-        top: -100%;
-        left: 12%;
-        right: 12%;
-        display: block;
-        z-index: 1;
-        padding: 10px 0px;
-        transition: all .5s;
-                
-    }
-
-    .show{
-        top: 100px;
-    }
-
-    .headnav li a{
-        color: hsl(213, 9%, 39%);
-        font-weight: bolder;
-        padding: 10px;
-        width:120px;
-        margin: 0 auto;
-    }
-
-    #contact{
-        color: hsl(213, 9%, 39%);
-    }
-    #contact:hover{
-        color:black;        
-        background-color: hsl(51, 100%, 49%);
-    }
-    .headnav li a:hover{
-        background-color: hsl(51, 100%, 49%);
-    }
-
-    .headnav .responsive{
-        display: block;
-    }
-
-    .nav-icon{
-        display: block;
-    }
-    
+            
     .headend{
         position: relative;
         top: 40px;
@@ -404,6 +358,58 @@ footer>img{
         padding: 10px;
     }
 }
+
+
+@media screen and (max-width:900px) {
+    .headnav{
+        font-size: 18px;
+        background-color: white;                
+        position: absolute;
+        top: -100%;
+        left: 12%;
+        right: 12%;
+        display: block;
+        z-index: 1;
+        padding: 10px 0px;
+        transition: all .5s;
+                
+    }
+    .show{
+        top: 100px;
+    }
+
+    .headnav li a{
+        color: hsl(213, 9%, 39%);
+        font-weight: bolder;
+        padding: 10px;
+        width:120px;
+        margin: 0 auto;
+    }
+
+    #contact{
+        color: hsl(213, 9%, 39%);
+    }
+    #contact:hover{
+        color:black;        
+        background-color: hsl(51, 100%, 49%);
+    }
+    .headnav li a:hover{
+        background-color: hsl(51, 100%, 49%);
+    }
+
+    .headnav .responsive{
+        display: block;
+    }
+
+    .nav-icon{
+        display: block;
+    }
+    .nav-icon:hover{
+        cursor: pointer;
+    }
+
+}
+
 
 
 @media screen and (max-width:300px) {
