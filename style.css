@@ -10,7 +10,13 @@ body{
 p{
     line-height: 25px;
 }
+ul{
+    display: inline;
+    padding: 0;
+}
 
+
+/* Head/First part */
 .head{
     padding: 30px;
     background-image: url('images/desktop/image-header.jpg');
@@ -23,35 +29,25 @@ p{
 .head h1{
     font-family: 'Fraunces', serif;
     text-align: center;
-    font-size: clamp(30px, 6vw,50px);;
+    font-size: clamp(30px, 6vw,50px);
+    letter-spacing: 4px;
 }
 
-
+.head-logo{
+    position: relative;
+    top:15px
+}
 
 .headnav{
     float: right;
-    font-size: 18px;
-}
-
-.arrow{
-    display: block;
-    margin: 0 auto;
-}
-
-.nav li{
-    list-style-type: none;
+    font-size: 19px;
     display: inline-block;
-    margin: 0 10px;    
+    background-color: gray;    
 }
 
-li a{
-text-align: center;
-display: block;
-padding: 15px 25px;
-text-decoration: none;
-color: white;
-
-border-radius: 20px;
+.headnav li a{
+    color: white;
+    padding: 15px;
 }
 
 .headnav a:hover{
@@ -71,20 +67,34 @@ border-radius: 20px;
     color: white;
 }
 
-.footnav li a{
-    color: hsl(168, 34%, 41%);
-    font-size: 18px;
+.nav-icon{
+    display: none;
+    position: relative;
+    float: right;
+    top: 15px;
 }
 
-.footnav a:hover{
-    color: white;
+.arrow{
+    display: block;
+    margin: 0 auto;
 }
 
-ul{
-    display: inline;
-    padding: 0;
+.nav li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;    
 }
 
+li a{
+text-align: center;    
+display: block;
+padding: 15px 25px;
+text-decoration: none;
+border-radius: 20px;
+}
+
+
+/* Second part/central body */
 .about,.service,.projects{
     width: 100%;
     min-height: 400px;
@@ -166,6 +176,8 @@ ul{
     background-size: cover;
 }
 
+
+/* Third part/Testimonials part */
 .testimonials{
     min-height: 500px;
     width: 100%;
@@ -212,6 +224,8 @@ h2{
     margin: 0 20px;
 }
 
+
+/* Fourth part/Snack images */
 .foodimgs{
     display: flex;
     width: 100%;
@@ -227,6 +241,8 @@ h2{
     height: 100%;
 }
 
+
+/* Last part/Footer */
 footer{
     color: hsl(168, 34%, 41%);
     height: 300px;
@@ -255,6 +271,17 @@ footer>img{
     margin-bottom: 60px;
 }
 
+
+.footnav li a{
+    color: hsl(168, 34%, 41%);
+    font-size: 18px;
+}
+
+.footnav a:hover{
+    color: white;
+}
+
+
 .logo{
     margin-bottom: 20px;
     
@@ -264,29 +291,67 @@ footer>img{
 }
 
 
-@media screen and (min-width:1000px) {
-    .head{
-        min-height: 500px;
-    }
-    .graphics,.photo{
-        min-height: 400px;
-    }
-    .about,.service,.projects{     
-        max-height: 500px;        
-    }
-}
 
-@media screen and (min-width:1200px) {
-    .graphics,.photo{
-        min-height: 480px;
-    }
-}
+/* Queries for different screen sizes */
 
 @media screen and (max-width:500px) {
     
+    /* head */
     .head{
         background-image: url(images/mobile/image-header.jpg);
+        min-height: 470px;
     }
+    
+    .headnav{
+        font-size: 18px;
+        background-color: white;                
+        position: absolute;
+        top: 100px;
+        left: 12%;
+        right: 12%;
+        display: block;
+        z-index: 1;
+        padding: 10px 0px;
+                
+    }
+    .headnav li a{
+        color: hsl(213, 9%, 39%);
+        font-weight: bolder;
+        padding: 10px;
+        width:120px;
+        margin: 0 auto;
+    }
+
+    #contact{
+        color: hsl(213, 9%, 39%);
+    }
+    #contact:hover{
+        color:black;        
+        background-color: hsl(51, 100%, 49%);
+    }
+    .headnav li a:hover{
+        background-color: hsl(51, 100%, 49%);
+    }
+
+    .headnav .responsive{
+        display: block;
+    }
+
+    .nav-icon{
+        display: block;
+    }
+    
+    .headend{
+        position: relative;
+        top: 40px;
+    }
+
+    .headend h1{
+        font-size: 37px;
+        letter-spacing: 3px;
+    }
+    
+    /*  central*/
     .graphics{
         background-image: url(images/mobile/image-graphic-design.jpg);
     }
@@ -306,6 +371,9 @@ footer>img{
     .photo,.graphics{
         min-height: 500px;
     }
+
+
+    /* testimonials */
     .reviews{
         flex-direction: column;
     }
@@ -319,16 +387,41 @@ footer>img{
         padding:60px 20px ;
     }
 
+
+    /* snackimg */
     .foodimgs div{
         flex-basis: 50%;
     }
-    li a{
+    
+    /* footer */
+    .footnav li a{
         padding: 10px;
     }
 }
 
+
 @media screen and (max-width:300px) {
     li a{
         padding: 0px;
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    .head{
+        min-height: 500px;
+    }
+    .graphics,.photo{
+        min-height: 400px;
+    }
+    .about,.service,.projects{     
+        max-height: 500px;        
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .graphics,.photo{
+        min-height: 480px;
     }
 }
