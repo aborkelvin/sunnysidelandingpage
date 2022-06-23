@@ -306,14 +306,20 @@ footer>img{
         font-size: 18px;
         background-color: white;                
         position: absolute;
-        top: 100px;
+        top: -100%;
         left: 12%;
         right: 12%;
         display: block;
         z-index: 1;
         padding: 10px 0px;
+        transition: all .5s;
                 
     }
+
+    .show{
+        top: 100px;
+    }
+
     .headnav li a{
         color: hsl(213, 9%, 39%);
         font-weight: bolder;
